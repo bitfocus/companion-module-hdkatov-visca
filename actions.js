@@ -14,8 +14,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.zoom_in).toString()
-				var cmd = '810104072' + selected + 'FF'
+				let selected = (event.options.zoom_in).toString()
+				const cmd = '810104072' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -33,8 +33,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.zoom_out).toString()
-				var cmd = '810104073' + selected + 'FF'
+			    let selected = (event.options.zoom_out).toString()
+				const cmd = '810104073' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -43,7 +43,7 @@ module.exports = function (self) {
 			description: 'Stop zoom action',
 			options: [],
 			callback: async (event) => {
-				var cmd = '8101040700FF'
+				const cmd = '8101040700FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -84,14 +84,14 @@ module.exports = function (self) {
 				max: 15
 			}],
 			callback: async (event) => {
-				var selected = (event.options.focus).toString()
+				let selected = (event.options.focus).toString()
 				if (selected === '082') {
 					selected += Number(event.options.far).toString(16)
 				}
 				if (selected === '083') {
 					selected += Number(event.options.near).toString(16)
 				}
-				var cmd = '810104' + selected + 'FF'
+				const cmd = '810104' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -110,8 +110,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.white_balance).toString()
-				var cmd = '810104' + selected + 'FF'
+				let selected = (event.options.white_balance).toString()
+				const cmd = '810104' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -128,8 +128,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.red_gain).toString()
-				var cmd = '810104' + selected + 'FF'
+				let selected = (event.options.red_gain).toString()
+				const cmd = '810104' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -146,8 +146,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.blue_gain).toString()
-				var cmd = '810104' + selected + 'FF'
+				let selected = (event.options.blue_gain).toString()
+				const cmd = '810104' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -165,8 +165,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.auto_exposure).toString()
-				var cmd = '81010439' + selected + 'FF'
+				let selected = (event.options.auto_exposure).toString()
+				const cmd = '81010439' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -183,8 +183,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.shutter).toString()
-				var cmd = '8101040A' + selected + 'FF'
+				let selected = (event.options.shutter).toString()
+				const cmd = '8101040A' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -201,8 +201,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.iris).toString()
-				var cmd = '8101040B' + selected + 'FF'
+				let selected = (event.options.iris).toString()
+				const cmd = '8101040B' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -219,8 +219,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.gain).toString()
-				var cmd = '8101040C' + selected + 'FF'
+				let selected = (event.options.gain).toString()
+				const cmd = '8101040C' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -237,8 +237,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.bright).toString()
-				var cmd = '8101040D' + selected + 'FF'
+				let selected = (event.options.bright).toString()
+				const cmd = '8101040D' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -255,8 +255,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.exposure_comp).toString()
-				var cmd = '8101040E' + selected + 'FF'
+				let selected = (event.options.exposure_comp).toString()
+				const cmd = '8101040E' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -273,8 +273,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.backlight).toString()
-				var cmd = '81010433' + selected + 'FF'
+				let selected = (event.options.backlight).toString()
+				const cmd = '81010433' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -298,9 +298,9 @@ module.exports = function (self) {
 				max: 255
 			}],
 			callback: async (event) => {
-				var selected = (event.options.preset).toString()
+				let selected = (event.options.preset).toString()
 				var numInput = Number(event.options.num).toString(16).padStart(2, "0")
-				var cmd = '8101043F' + selected + numInput + 'FF'
+				const cmd = '8101043F' + selected + numInput + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -324,9 +324,9 @@ module.exports = function (self) {
 				max: 5
 			}],
 			callback: async (event) => {
-				var selected = (event.options.profile).toString()
+				let selected = (event.options.profile).toString()
 				var numInput = Number(event.options.num).toString(16).padStart(2, "0")
-				var cmd = '81010440' + selected + numInput + 'FF'
+				const cmd = '81010440' + selected + numInput + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -334,7 +334,7 @@ module.exports = function (self) {
 			name: 'Menu On/Off',
 			options: [],
 			callback: async (event) => {
-				var cmd = '8101060610FF'
+				const cmd = '8101060610FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -342,7 +342,7 @@ module.exports = function (self) {
 			name: 'On Screen Display',
 			options: [],
 			callback: async (event) => {
-				var cmd = '8101043F015FFF'
+				const cmd = '8101043F015FFF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -386,8 +386,8 @@ module.exports = function (self) {
 				max: 24
 			}],
 			callback: async (event) => {
-				var selected = (event.options.pan_tilt).toString()
-				var cmd = ""
+				const  selected = (event.options.pan_tilt).toString()
+				let cmd = ""
 				if (selected === '04' || selected === '05') {
 					cmd = '810106' + selected + 'FF'
 				} else {
@@ -411,8 +411,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.wdr).toString()
-				var cmd = '8101043D' + selected + 'FF'
+				const  selected = (event.options.wdr).toString()
+				const cmd = '8101043D' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -420,7 +420,7 @@ module.exports = function (self) {
 			name: 'Menu Enter',
 			options: [],
 			callback: async (event) => {
-				var cmd = '81017E01020001FF'
+				const cmd = '81017E01020001FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -437,8 +437,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.tally_lamp).toString()
-				var cmd = '81017E010A00' + selected + 'FF'
+				const  selected = (event.options.tally_lamp).toString()
+				const cmd = '81017E010A00' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -456,8 +456,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.freeze).toString()
-				var cmd = '81010462' + selected + 'FF'
+				const  selected = (event.options.freeze).toString()
+				const cmd = '81010462' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -474,8 +474,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.auto_tracking).toString()
-				var cmd = '81010712' + selected + 'FF'
+				const  selected = (event.options.auto_tracking).toString()
+				const cmd = '81010712' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -492,8 +492,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.auto_tracking_v1).toString()
-				var cmd = '8101047D' + selected + '00FF'
+				const  selected = (event.options.auto_tracking_v1).toString()
+				const cmd = '8101047D' + selected + '00FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -511,8 +511,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.frame_tracking).toString()
-				var cmd = '8101047D' + selected + '00FF'
+				const  selected = (event.options.frame_tracking).toString()
+				const cmd = '8101047D' + selected + '00FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -530,8 +530,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.audio_tracking).toString()
-				var cmd = '8101047D' + selected + '00FF'
+				const  selected = (event.options.audio_tracking).toString()
+				const cmd = '8101047D' + selected + '00FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -550,8 +550,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.tracking_control).toString()
-				var cmd = '8101043F01' + selected + 'FF'
+				const  selected = (event.options.tracking_control).toString()
+				const cmd = '8101043F01' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -568,8 +568,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.multi_presenter).toString()
-				var cmd = '810104A9' + selected + 'FF'
+				const  selected = (event.options.multi_presenter).toString()
+				const cmd = '810104A9' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -586,7 +586,7 @@ module.exports = function (self) {
 			}],
 			callback: async (event) => {
 				var numInput = Number(event.options.num).toString(16).padStart(2, "0")
-				var cmd = '810104AA' + numInput + 'FF'
+				const cmd = '810104AA' + numInput + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -603,8 +603,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.auto_zoom).toString()
-				var cmd = '810104A0' + selected + 'FF'
+				const  selected = (event.options.auto_zoom).toString()
+				const cmd = '810104A0' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -621,8 +621,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.effective_tracking).toString()
-				var cmd = '810104A1' + selected + 'FF'
+				const  selected = (event.options.effective_tracking).toString()
+				const cmd = '810104A1' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -639,8 +639,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.rtmp).toString()
-				var cmd = '810104A2' + selected + 'FF'
+				const  selected = (event.options.rtmp).toString()
+				const cmd = '810104A2' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -658,8 +658,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.video_mode).toString()
-				var cmd = '810104A3' + selected + 'FF'
+				const  selected = (event.options.video_mode).toString()
+				const cmd = '810104A3' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -676,8 +676,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.presets_affect).toString()
-				var cmd = '810104A5' + selected + 'FF'
+				const  selected = (event.options.presets_affect).toString()
+				const cmd = '810104A5' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -694,8 +694,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.relative_zoom).toString()
-				var cmd = '810104A6' + selected + 'FF'
+				const  selected = (event.options.relative_zoom).toString()
+				const cmd = '810104A6' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -712,8 +712,8 @@ module.exports = function (self) {
 				]
 			}],
 			callback: async (event) => {
-				var selected = (event.options.auto_tilt).toString()
-				var cmd = '810104A7' + selected + 'FF'
+				const  selected = (event.options.auto_tilt).toString()
+				const cmd = '810104A7' + selected + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -730,7 +730,7 @@ module.exports = function (self) {
 			}],
 			callback: async (event) => {
 				var numInput = Number(event.options.num).toString(16).padStart(2, "0")
-				var cmd = '810104A8' + numInput + 'FF'
+				const cmd = '810104A8' + numInput + 'FF'
 				self.sendCommand(cmd)
 			}
 		},
@@ -743,7 +743,7 @@ module.exports = function (self) {
 				label: 'Type a VISCA command. See Help for additional guidance.'
 			}],
 			callback: async (event) => {
-				var cmd = (event.options.custom).toString().replace(/ /g, "")
+				let cmd = (event.options.custom).toString().replace(/ /g, "")
 				self.sendCommand(cmd)
 			}
 		}
